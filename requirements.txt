@@ -1,0 +1,13 @@
+streamlit>=1.32
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+joblib>=1.3
+plotly>=5.18
+matplotlib>=3.7
+
+# CNN model ke liye (optional). Agar Streamlit Cloud par deploy karte waqt
+# size/build-time ki wajah se error aaye, to neeche wali line hata dein —
+# backend.py khud-ba-khud CNN skip kar dega aur SVM, Random Forest, ANN
+# bila kisi error ke chalte rahenge.
+tensorflow>=2.16,<2.19
