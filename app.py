@@ -249,7 +249,11 @@ if page == "🏠 Overview":
 
     with col_left:
         st.markdown("#### 📍 Incident Locations")
-        map_df = df[["Latitude", "Longitude"]].dropna()
+        map_df = (
+            df[["Latitude", "Longitude"]]
+            .dropna()
+            .rename(columns={"Latitude": "latitude", "Longitude": "longitude"})
+        )
         st.map(map_df, color=EMBER, size=4000)
 
     with col_right:
